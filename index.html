@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Elemental Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>⚛️ JEE Elemental Quiz</h1>
+            <p>Master the Periodic Table (1-118)</p>
+        </header>
+
+        <div id="quiz-card" class="card">
+            <div class="element-display">
+                <span id="element-symbol">H</span>
+                <h2 id="element-name">Hydrogen</h2>
+            </div>
+
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label>Atomic Number (Z)</label>
+                    <input type="number" id="z-input" placeholder="e.g. 1">
+                </div>
+                <div class="input-wrapper">
+                    <label>Mass Number (A)</label>
+                    <input type="number" id="a-input" placeholder="e.g. 1">
+                    <small class="hint">*Use most common isotope</small>
+                </div>
+            </div>
+
+            <button id="submit-btn" onclick="checkAnswer()">Check Answer</button>
+            <button id="next-btn" class="hidden" onclick="nextQuestion()">Next Element ➡</button>
+
+            <div id="feedback" class="feedback hidden"></div>
+            
+            <div id="fact-box" class="fact-box hidden">
+                <h3>💡 Fun Fact / JEE Note:</h3>
+                <p id="jee-fact">Hydrogen resembles both Alkali metals and Halogens.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Score: <span id="score">0</span> / <span id="total">0</span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
